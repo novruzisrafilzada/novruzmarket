@@ -1,0 +1,8 @@
+[
+  { "id": 1001, "name": "Apple iPhone 15 Pro", "price": 2499, "oldPrice": 2699, "image": "/images/mock/iphone.png", "rating": 4.6, "reviewCount": 18, "stock": 12, "discount": "-10%", "sold": 1200, "categoryId": 1 },
+  { "id": 1002, "name": "Sony WH-1000XM5 Headphones", "price": 699, "oldPrice": 799, "image": "/images/mock/headphones.png", "rating": 4.7, "reviewCount": 43, "stock": 7, "discount": "-8%", "sold": 830, "categoryId": 2 },
+  { "id": 1003, "name": "Apple Watch Series 9", "price": 899, "oldPrice": 999, "image": "/images/mock/watch.png", "rating": 4.4, "reviewCount": 9, "stock": 5, "discount": "-11%", "sold": 540, "categoryId": 1 },
+  { "id": 1004, "name": "Samsung Galaxy S23 Ultra", "price": 2199, "oldPrice": 2399, "image": "/images/mock/galaxy.png", "rating": 4.5, "reviewCount": 27, "stock": 9, "discount": "-20%", "sold": 1500, "categoryId": 1 },
+  { "id": 1005, "name": "Wireless Gaming Controller", "price": 159, "oldPrice": 179, "image": "/images/mock/controller.png", "rating": 4.2, "reviewCount": 6, "stock": 20, "discount": "-12%", "sold": 210, "categoryId": 3 },
+  { "id": 1006, "name": "Ultra Slim Laptop 14-inch", "price": 1999, "oldPrice": 2199, "image": "/images/mock/laptop.png", "rating": 4.3, "reviewCount": 15, "stock": 6, "discount": "-5%", "sold": 980, "categoryId": 4 }
+]

@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--app-text, #1F2937);
+  background: var(--app-bg, #FFFFFF);
+}
+
+.duka-row {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(var(--bs-gutter-x) * -0.5);
+  margin-right: calc(var(--bs-gutter-x) * -0.5);
+  margin-top: calc(var(--bs-gutter-y) * -1);
+}
+
+.duka-row > * {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+}
+
+.duka-col-6 {
+  width: 50%;
+}
+
+@media (min-width: 768px) {
+  .duka-col-md-4 {
+    width: 33.33333333%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .duka-col-xl-3 {
+    width: 25%;
+  }
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+@supports not (overflow-x: clip) {
+  html, body { overflow-x: hidden; }
+}
+
+.container {
+  @apply max-w-[1400px] mx-auto px-4;
+}
+
+/* Custom Utilities */
+.text-primary {
+  color: #2563eb;
+}
+
+.bg-primary {
+  background-color: #2563eb;
+}
+
+.border-primary {
+  border-color: #2563eb;
+}
+
+/* Swiper custom styles */
+.swiper-button-next,
+.swiper-button-prev {
+  @apply bg-white w-10 h-10 rounded-full shadow-lg after:text-xs text-gray-800 hover:bg-blue-600 hover:text-white transition-all;
+}
+
+.swiper-pagination-bullet {
+  @apply bg-gray-300 opacity-100;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-blue-600 w-6 rounded-full transition-all;
+}
+
+.home-card-action-btn {
+  transition: background-color .2s ease, color .2s ease, opacity .2s ease, transform .2s ease;
+}
+
+.home-card-action-btn:hover:not(:disabled) {
+  background-color: var(--home-card-action-hover-bg, var(--home-card-action-bg, #F4C400)) !important;
+}
+
+.home-card-link {
+  transition: color .2s ease, opacity .2s ease;
+}
+
+.home-card-link:hover {
+  opacity: .86;
+}
+
+.banner-cta-pill {
+  transition: background-color .18s ease, color .18s ease, filter .18s ease, transform .18s ease;
+}
+
+.banner-cta-pill:hover {
+  background-color: #EAB308 !important;
+  color: #111827 !important;
+  filter: saturate(1.02);
+  transform: translateY(-1px);
+}
