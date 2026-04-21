@@ -24,9 +24,10 @@ const createGroup = (key: string, label: string, options: string[]): CategoryFil
   options: Array.from(new Set(options.map((item) => String(item || '').trim()).filter(Boolean)))
 })
 
-const mergeGroups = (...parts: CategoryFilterGroup[][]) => {
+const mergeGroups = (...parts: Array<CategoryFilterGroup | CategoryFilterGroup[] | CategoryFilterGroup[][]>) => {
   const byKey = new Map<string, CategoryFilterGroup>()
-  for (const group of parts.flat()) {
+  for (const group of parts.flat(Infinity) as CategoryFilterGroup[]) {
+    if (!group || typeof group.key !== 'string' || !Array.isArray(group.options)) continue
     if (!byKey.has(group.key)) {
       byKey.set(group.key, { ...group, options: [...group.options] })
       continue
