@@ -33,7 +33,7 @@ const safeReadJson = async () => {
 
 const atomicWriteJson = async (value: unknown) => {
   await ensureDir()
-  await replaceJsonFile(filePath, value)
+  await replaceJsonFile(schemasPath, value)
 }
 
 export const readCategoryFilterSchemas = async () => {
